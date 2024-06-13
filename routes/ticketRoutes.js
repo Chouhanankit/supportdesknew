@@ -4,7 +4,7 @@ const { createTicket, getTickets, getTicket, deleteTicket, upadateTicket } = req
 
 const router = express.Router();
 
-router.route("/").post(protect, createTicket).get(protect, getTickets)
+router.route("/").post(createTicket).get(getTickets)
 router.route("/:id").get(protect, getTicket).delete(protect, deleteTicket).put(protect, upadateTicket)
 
-module.exports = router;
+module.exports = router; 
