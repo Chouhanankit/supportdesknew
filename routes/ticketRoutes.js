@@ -5,6 +5,6 @@ const { createTicket, getTickets, getTicket, deleteTicket, upadateTicket } = req
 const router = express.Router();
 
 router.route("/").post(createTicket).get(getTickets)
-router.route("/:id").get(protect, getTicket).delete(protect, deleteTicket).put(protect, upadateTicket)
+router.route("/:id").get( getTicket).delete( deleteTicket).put(upadateTicket)
 
 module.exports = router; 

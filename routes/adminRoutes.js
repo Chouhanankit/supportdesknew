@@ -4,9 +4,9 @@ const { getAllUser, getadminTickets, getadminTicket } = require('../controllers/
 
 const router = express.Router()
 
-router.get('/users', isAuthorized, getAllUser)
-router.get('/tickets', isAuthorized, getadminTickets)
-router.get('/tickets/:id', isAuthorized, getadminTicket)
+router.get('/users', getAllUser)
+router.get('/tickets', getadminTickets)
+router.get('/tickets/:id', getadminTicket)
 
 module.exports = router
 
